@@ -18,21 +18,28 @@ function JobListing(props) {
             }}
         >
             <div className={jobListingStyles["list-details"]}>
-                <img
-                    className={jobListingStyles["company-logo"]}
-                    src={`https://nodeflair.com/companies/${props.job.company.id}.png`}
-                    alt={props.job.company.companyname + " logo"}
-                />
-                <div className={jobListingStyles["company-name-rating"]}>
+                <div className={jobListingStyles["vertical-logo-mobile"]}>
+                    <img
+                        className={jobListingStyles["company-logo"]}
+                        src={`https://nodeflair.com/companies/${props.job.company.id}.png`}
+                        alt={props.job.company.companyname + " logo"}
+                    />
                     <div>
-                        {props.job.company.companyname}
-                        {props.job.company.rating != 0
-                            ? props.job.company.rating + " ★"
-                            : null}
+                        <div>
+                            {props.job.company.companyname}
+
+                            <span
+                                className={jobListingStyles["company-rating"]}
+                            >
+                                {props.job.company.rating != 0
+                                    ? props.job.company.rating + " ★"
+                                    : null}
+                            </span>
+                        </div>
+                        <h2 className={jobListingStyles["job-title"]}>
+                            {props.job.title}
+                        </h2>
                     </div>
-                    <h2 className={jobListingStyles["job-title"]}>
-                        {props.job.title}
-                    </h2>
                 </div>
                 <span className={jobListingStyles["job-position"]}>
                     {props.job.position}
@@ -64,10 +71,13 @@ function JobListing(props) {
                     </span>
                 </div>
                 <div className={jobListingStyles.salary}>
-                    {props.job.formatted_salary_min +
-                        "-" +
-                        props.job.formatted_salary_max +
-                        " / mth"}
+                    {props.job.formatted_salary_min &&
+                    props.job.formatted_salary_max
+                        ? props.job.formatted_salary_min +
+                          "-" +
+                          props.job.formatted_salary_max +
+                          " / mth"
+                        : null}
                 </div>
             </div>
             <hr />

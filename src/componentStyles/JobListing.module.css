@@ -18,7 +18,12 @@
 }
 
 .add-list-details {
-    margin-left: 55px;
+    margin-left: 0;
+}
+
+.vertical-logo-mobile {
+    display: flex;
+    flex-direction: column;
 }
 
 .company-logo {
@@ -26,6 +31,11 @@
     height: 45px;
     border-radius: 4px;
     margin-right: 10px;
+}
+
+.company-rating {
+    margin-left: 5px;
+    white-space: nowrap;
 }
 
 .job-title {
@@ -51,6 +61,7 @@
 
 .country {
     margin-left: 10px;
+    white-space: nowrap;
 }
 
 .salary {
@@ -76,4 +87,15 @@ hr {
 
 .outline {
     border: 3px solid #1fc76a;
+}
+
+@media screen and (min-width: 1010px) {
+    .vertical-logo-mobile {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .add-list-details {
+        margin-left: 55px;
+    }
 }
