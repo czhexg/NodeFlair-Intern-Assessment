@@ -1,0 +1,10 @@
+.JobDesc {
+    margin-bottom: 5px;
+    padding: 15px;
+    width: 60%;
+    background-color: white;
+    border-radius: 8px;
+    position: sticky;
+    top: 15px;
+    height: 1300px;
+}
