@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import "../componentStyles/App.css";
-import Jobs from "../Jobs";
+
+import "../componentStyles/App.module.css";
+
+import Jobs from "../data/Jobs";
 
 import JobDesc from "./JobDesc";
 import JobsList from "./JobsList";

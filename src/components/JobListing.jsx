@@ -1,5 +1,7 @@
 import React from "react";
-import "../componentStyles/JobListing.css";
+
+import "../componentStyles/JobListing.module.css";
+
 import TechStack from "./TechStack";
 
 function JobListing(props) {

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../componentStyles/JobsList.css";
+
+import "../componentStyles/JobsList.module.css";
 
 import JobListing from "./JobListing";
 
