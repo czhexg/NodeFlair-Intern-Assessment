@@ -1,0 +1,2 @@
+This is my implementation of the job listings on NodeFlair Jobs for the Software Engineering Intern assessment, built using React. Some styles were taken from the NodeFlair Jobs site, eg font-size, font-weight, color etc.
+Link to deployed site: https://node-flair-intern-assessment-czhexg.vercel.app/
