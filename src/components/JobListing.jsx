@@ -1,41 +1,49 @@
 import React from "react";
 
-import "../componentStyles/JobListing.module.css";
+import jobListingStyles from "../componentStyles/JobListing.module.css";
 
 import TechStack from "./TechStack";
 
 function JobListing(props) {
     return (
         <div
-            className={"JobListing " + props.outline}
+            className={
+                jobListingStyles["JobListing"] +
+                " " +
+                jobListingStyles[props.outline]
+            }
             onClick={() => {
                 props.setSelectedListing(props.id);
                 props.setSelectedListingTitle(props.job.title);
             }}
         >
-            <div className="list-details">
+            <div className={jobListingStyles["list-details"]}>
                 <img
-                    className="company-logo"
+                    className={jobListingStyles["company-logo"]}
                     src={`https://nodeflair.com/companies/${props.job.company.id}.png`}
                     alt={props.job.company.companyname + " logo"}
                 />
-                <div className="company-name-rating">
+                <div className={jobListingStyles["company-name-rating"]}>
                     <div>
                         {props.job.company.companyname}
                         {props.job.company.rating != 0
                             ? props.job.company.rating + " ★"
                             : null}
                     </div>
-                    <h2 className="job-title">{props.job.title}</h2>
+                    <h2 className={jobListingStyles["job-title"]}>
+                        {props.job.title}
+                    </h2>
                 </div>
-                <span className="job-position">{props.job.position}</span>
+                <span className={jobListingStyles["job-position"]}>
+                    {props.job.position}
+                </span>
             </div>
-            <div className="add-list-details">
-                <div className="time-country">
-                    <span className="job-time-ago">
+            <div className={jobListingStyles["add-list-details"]}>
+                <div className={jobListingStyles["time-country"]}>
+                    <span className={jobListingStyles["job-time-ago"]}>
                         {props.job.time_ago} ago
                     </span>
-                    <span className="country">
+                    <span className={jobListingStyles.country}>
                         <svg
                             aria-hidden="true"
                             focusable="false"
@@ -55,7 +63,7 @@ function JobListing(props) {
                         {" " + props.job.country}
                     </span>
                 </div>
-                <div className="salary">
+                <div className={jobListingStyles.salary}>
                     {props.job.formatted_salary_min +
                         "-" +
                         props.job.formatted_salary_max +
@@ -63,7 +71,7 @@ function JobListing(props) {
                 </div>
             </div>
             <hr />
-            <div className="techstacks">
+            <div className={jobListingStyles.techstacks}>
                 {props.job.tech_stacks.map((tech) => {
                     return <TechStack key={tech.name} tech={tech} />;
                 })}

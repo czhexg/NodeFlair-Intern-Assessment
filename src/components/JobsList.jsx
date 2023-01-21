@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import "../componentStyles/JobsList.module.css";
+import jobsListStyles from "../componentStyles/JobsList.module.css";
 
 import JobListing from "./JobListing";
 
 function JobsList(props) {
     return (
-        <div className="JobsList">
+        <div className={jobsListStyles.JobsList}>
             {props.Jobs.map((job) => {
                 return (
                     <JobListing

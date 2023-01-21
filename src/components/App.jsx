@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "../componentStyles/App.module.css";
+import appStyles from "../componentStyles/App.module.css";
 
 import Jobs from "../data/Jobs";
 
@@ -13,8 +13,8 @@ function App() {
         Jobs[0]["title"]
     );
     return (
-        <div className="App">
-            <div className="container">
+        <div className={appStyles.App}>
+            <div className={appStyles.container}>
                 <JobsList
                     selectedListing={selectedListing}
                     setSelectedListing={setSelectedListing}

@@ -1,9 +1,9 @@
 import React from "react";
 
-import "../componentStyles/TechStack.module.css";
+import techStackStyles from "../componentStyles/TechStack.module.css";
 
 function TechStack(props) {
-    return <span className="techstack">{props.tech.name}</span>;
+    return <span className={techStackStyles.techstack}>{props.tech.name}</span>;
 }
 
 export default TechStack;
